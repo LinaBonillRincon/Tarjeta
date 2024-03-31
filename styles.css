@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+    text-align: center;
+    
+}
+ 
+#wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-y: auto;
+}
+ 
+#game {
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+ 
+
+ 
+.card {
+    width: 150px;
+    height: 180px;
+    margin: 1rem; /* Reducir el margen entre las cartas */
+    padding: 0.2rem;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+ 
+.card.active {
+    transform: rotateY(180deg); }
+ 
+.card div {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+ 
+.card .face {
+    background: red;
+    transform: rotateY( 180deg );
+    color: white;
+    font-size: 6rem;
+ }
+.face img {
+    width: 100%; /* Ajusta el ancho de la imagen al tamaño de la cara de la tarjeta */
+    height: 100%; /* Ajusta la altura de la imagen al tamaño de la cara de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen para que llene completamente la cara de la tarjeta */
+    border-radius: 5px; /* Opcional: Aplica un borde redondeado a las imágenes */
+}
+
+.card .back {
+    border: 3px solid red;
+    background: url(portada.jpg) center / contain no-repeat;
+ }
+
+#miBoton {
+   padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+   background-color: red; /* Color de fondo del botón */
+   color: #fff; /* Color del texto del botón */
+   border: none; /* Eliminar borde del botón */
+   border-radius: 5px; /* Borde redondeado del botón */
+   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+   margin: 0 auto; 
+}
+
+#miBoton:disabled {
+   opacity: 0.6; /* Opacidad reducida para el botón deshabilitado */
+   cursor: not-allowed; /* Cambia el cursor al pasar sobre el botón deshabilitado */
+}
+#felicitaciones{
+   font-size: 40px;
+   font-family: 'Times New Roman', Times, serif;
+   color: white;
+}

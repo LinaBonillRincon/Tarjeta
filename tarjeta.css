@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background: #020202;
+  cursor: crosshair;
+  overflow-y: auto;
+}
+
+canvas {
+  display: block;
+  width: 100%; /* Ajustar el ancho del canvas al 100% del contenedor */
+  height: auto; /* Permitir que la altura del canvas se ajuste automáticamente */
+}
+
+h1, h2 {
+  color: #F4F5F7;
+  font-family: "Impact,Charcoal,sans-serif";
+  font-size: 5vw; /* Utilizar unidades relativas para el tamaño de fuente */
+  font-weight: 800;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media queries para estilos específicos en diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
+  h1, h2 {
+      font-size: 8vw; /* Cambiar el tamaño de fuente para dispositivos móviles */
+  }
+}
